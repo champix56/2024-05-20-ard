@@ -1,9 +1,19 @@
 #ifndef _STRUCT_H_
 #define _STRUCT_H_
-struct {
-  uint8_t annee,mois,jour;
+
+struct tmTime_t {
+  uint8_t annee, mois, jour;
+  uint8_t heure, minute, seconde;
+};
+struct tmSensors_t {
+  struct tmTime_t datetime;
   float temperature;
-  uint16_t pression; 
-} tmSensors_t;
-typedef tmSensor struct tmSensors_t;
+  uint16_t pression;
+  float humidite;
+};
+
+union u_tmSensor {
+  tmSensors_t tsensor;
+  uint8_t arrBytes[sizeof(struct tmSensors_t)];
+};
 #endif

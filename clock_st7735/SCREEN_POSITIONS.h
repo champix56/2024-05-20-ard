@@ -16,6 +16,13 @@ position dans l'ecran de l'heure
 position dans l'ecran de l'heure
 **/
 #define PRESS_POS_X 40
-#define PRESS_POS_Y 50
+#define PRESS_POS_Y 55
 #define PRESS_WIDTH 40
+/***
+position dans l'ecran de l'heure
+**/
+#define RH_POS_X 40
+#define RH_POS_Y 85
+#define RH_WIDTH 40
+
 #endif
